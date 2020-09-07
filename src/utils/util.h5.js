@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+
 
 const util = {
   query: () => {

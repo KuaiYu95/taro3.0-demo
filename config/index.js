@@ -21,7 +21,7 @@ const config = {
     }
   },
   framework: 'react',
-  mini: {
+  weapp: {
     postcss: {
       pxtransform: {
         enable: true,
@@ -45,8 +45,9 @@ const config = {
     },
   },
   h5: {
-    publicPath: '/',
+    publicPath: process.env.TARO_ENV === 'development' ? '/' : './',
     staticDirectory: 'static',
+    esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
         enable: true,
